@@ -2,19 +2,14 @@ package Oefening3;
 
 public class MainApp {
     public static void main(String[] args) {
-        Shape[] shapes = new Shape[3];
-        shapes[0]=new Circle(5.0);
-        shapes[1]=new Rectangle(4.0,3.0);
-        shapes[2]=new Triangle(6.0,2.0);
-
-        double totalArea = 0.0;
-        for (Shape shape: shapes){
-            totalArea+=shape.getArea();
-        }
-        System.out.println("Area of shapes: ");
-        for (Shape shape:shapes){
-            System.out.println(shape.getClass().getSimpleName()+": "+shape.getArea());
-        }
-        System.out.println("Total area of shapes: "+totalArea);
+        System.out.println();
+        System.out.println("***************************************************");
+        Planet sun = new Planet("Sun is",696340.0);
+        System.out.println("Circumference of "+ sun.getName()+": "+sun.calculaterCircumference()+" km     *");
+        Planet earth = new Planet("Earth is",6371.0);
+        System.out.println("Circumference of "+ earth.getName()+": "+earth.calculaterCircumference()+" km  *");
+        Planet moon = new Planet("Moon is",1737.0);
+        System.out.println("Circumference of "+ moon.getName()+": "+moon.calculaterCircumference()+" km   *");
+        System.out.println("***************************************************");
     }
 }
