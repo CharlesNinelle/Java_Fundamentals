@@ -2,21 +2,23 @@ package Oefening2;
 
 public class MainApp {
     public static void main(String[] args) {
-        System.out.println("****************");
+        Car myCar = new Car() {
+            @Override
+            public void toggleSwitch() {
+            }
+        };
         System.out.println();
-        Dog dog = new Dog();
-        dog.ordinaryMethod();
-        {
-            System.out.println("but dogs is barking");
-        }
+        System.out.println("**********************");
         System.out.println();
-        System.out.println("***************");
+        myCar.toggleSwith();//Engine ON
+        myCar.gas();// Acceleration (engine is on)
         System.out.println();
-
-        Cat cat = new Cat();
-        cat.ordinaryMethod();
-        {
-            System.out.println("but cats is meowning");
-        }
+        System.out.println("**********************");
+        System.out.println();
+        myCar.toggleSwith();//Turn off the engine
+        myCar.gas();//No acceleration (engine off)
+        System.out.println();
+        System.out.println("**********************");
+        System.out.println();
     }
 }
